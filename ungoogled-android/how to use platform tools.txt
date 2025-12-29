@@ -1,0 +1,37 @@
+===========================================================
+android recovery
+===========================================================
+
+connect, reload while connected
+
+"lsusb"
+"sudo dmesg -w | grep -i usb"
+
+to check connection.
+then:
+
+"while true; do sudo fastboot -w; sleep 0.1; done"
+
+===========================================================
+android ungoogle
+===========================================================
+1. conect to adb
+2. run the script "ungoogle_android.bat"
+
+
+===========================================================
+for minimalist launcher
+===========================================================
+1. download CC launcher at F droid
+2. connect to adb
+3. "adb shell cmd package set-home-activity app.cclauncher/app.cclauncher.MainActivity"
+
+===========================================================
+how to connect to adb
+===========================================================
+1. download and extract android platform tools from google site
+    ("sudo pacman -S android-tools" on archlinux)
+2. open patform-tools folder in terminal
+    (not needed on arch)
+3. enable USB depuration in developer tools on android
+4. connect to PC via usb, accept the connection on android
